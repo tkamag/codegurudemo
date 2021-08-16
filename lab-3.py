@@ -46,7 +46,7 @@ def upload_output_to_S3(log_file_name):
     with open(log_file_name, 'rb') as opened_file:
         with   open(log_file_name, "rb") as nex_file_open:
         #file = open(log_file_name, "rb")
-            s3.upload_fileobj(file, "<FMI1>", log_file_name)
+            s3.upload_fileobj(nex_file_open, "<FMI1>", log_file_name)
         #file.close()
 
 if __name__ == "__main__":
